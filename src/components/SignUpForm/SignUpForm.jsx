@@ -4,7 +4,7 @@ import { signUp } from '../../utilities/users-service'
 
 export default function SignUpForm({ setUser }) {
     const [formData, setFormData] = useState({
-        name: '',
+        charName: '',
         email: '',
         password: '',
         confirm: '',
@@ -40,8 +40,8 @@ export default function SignUpForm({ setUser }) {
         <div>
             <div className="form-container">
               <form autoComplete="off" onSubmit={handleSubmit}>
-                <label>Name</label>
-                <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+                <label>Character Name</label>
+                <input type="text" name="charName" value={formData.charName} onChange={handleChange} required />
                 <label>Email</label>
                 <input type="email" name="email" value={formData.email} onChange={handleChange} required />
                 <label>Password</label>
