@@ -1,4 +1,5 @@
 import sendRequest from './send-request'
+
 const BASE_URL = '/api/users'
 
 export async function signUp(userData) {
@@ -11,4 +12,8 @@ export async function login(userData) {
 
 export function checkToken() {
     return sendRequest(`${BASE_URL}/check-token`)
+}
+
+export function getInfo(uname) {
+    return sendRequest(`https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=${uname}`)
 }
