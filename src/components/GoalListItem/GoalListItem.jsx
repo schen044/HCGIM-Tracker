@@ -24,7 +24,7 @@ export default function GoalListItem({ goalItem }) {
       <div className="name">
         <img src={goalItem.icon} />
         {goalItem.name}
-        <input type="checkbox" />
+        <input type="checkbox" defaultChecked={goalItem.completed}/>
         <Link to={`/goals/edit/${itemId}`}><button type="submit">Edit</button></Link>
         <button type="submit" onClick={handleDelete}>Delete</button>
       </div>
