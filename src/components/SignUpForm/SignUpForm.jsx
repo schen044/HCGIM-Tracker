@@ -1,8 +1,10 @@
 // Rewrite the SignUpForm as a function component
 import { useState } from 'react'
 import { signUp } from '../../utilities/users-service'
+import { useNavigate } from "react-router-dom";
 
 export default function SignUpForm({ setUser }) {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         charName: '',
         email: '',
@@ -28,6 +30,7 @@ export default function SignUpForm({ setUser }) {
             delete formDataCopy.confirm
             const user = await signUp(formDataCopy)
             setUser(user)
+            navigate('/goals')
         } catch {
             setFormData({
                 ...formData,
