@@ -1,7 +1,6 @@
 import './GoalListItem.css';
 import { deleteGoal } from '../../utilities/goals-api'
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { Link } from 'react-router-dom'
 
 export default function GoalListItem({ goalItem }) {
