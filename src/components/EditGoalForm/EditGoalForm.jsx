@@ -1,16 +1,8 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as goalsAPI from '../../utilities/goals-api'
 
-export default function EditGoalForm({ goalId }) {
+export default function EditGoalForm({ goalId, goal, setGoal }) {
     const navigate = useNavigate()
-    const [goal, setGoal] = useState({
-        name: '',
-        goalType: 'personal',
-        tier: '',
-        icon: '',
-        completed: false
-    });
 
     function handleChange(evt) {
         let formValue = convertBoolean(evt);

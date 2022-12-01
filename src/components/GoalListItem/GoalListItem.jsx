@@ -13,11 +13,6 @@ export default function GoalListItem({ goalItem }) {
     console.log(delGoal)
     navigate('/profile')
   }
-  async function handleEdit() {
-    const editGoal =  await editGoal(itemId)
-    console.log(editGoal)
-    navigate('/goals')
-  }
 
   return (
     <div className="GoalListItem">

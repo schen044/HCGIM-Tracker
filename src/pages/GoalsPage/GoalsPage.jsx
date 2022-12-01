@@ -12,6 +12,6 @@ export default function GoalsPage() {
     return (
         <>
             <h1>Goals</h1>
-            <GoalList goals={goals} />
+            <GoalList goals={goals} setGoals={setGoals} />
         </>
 )}

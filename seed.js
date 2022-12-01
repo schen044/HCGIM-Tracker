@@ -25,8 +25,6 @@ const Goal = require('./models/goal');
     {name: 'Song of the Elves', goalType: 'clue', tier: 'master', icon: 'https://oldschool.runescape.wiki/images/Quest_point_icon.png?dc356'},
   ]);
 
-  console.log(goals)
-
   process.exit();
 
 })();

@@ -11,6 +11,13 @@ import NavBar from '../../components/NavBar/NavBar'
 
 export default function App() {
   const [user, setUser] = useState(getUser())
+  const [goal, setGoal] = useState({
+    name: '',
+    goalType: 'personal',
+    tier: '',
+    icon: '',
+    completed: false
+});
   
 
   return (
@@ -20,8 +27,8 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path="/goals/" element={<GoalsPage />} />
-            <Route path="/goals/new" element={<NewGoalPage />} />
-            <Route path="/goals/edit/:id" element={<EditGoalPage />} />
+            <Route path="/goals/new" element={<NewGoalPage goal={goal} setGoal={setGoal} />} />
+            <Route path="/goals/edit/:id" element={<EditGoalPage goal={goal} setGoal={setGoal} />} />
             <Route path="/profile" element={<UserInfoPage user={user}/>} />
           </Routes>
         </>

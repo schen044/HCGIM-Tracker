@@ -7,6 +7,6 @@ export default function EditGoalPage() {
     return (
         <>
             <h1>EditGoalPage</h1>
-            <EditGoalForm goalId={goalId}/>
+            <EditGoalForm goalId={goalId} />
         </>
 )}
