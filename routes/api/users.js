@@ -8,5 +8,6 @@ router.post('/', usersCtrl.create)
 router.post('/login', usersCtrl.login)
 // Insert ensureLoggedIn on all routes that need protecting
 router.get('/check-token', ensureLoggedIn, usersCtrl.checkToken);
+router.get('/info/:username', ensureLoggedIn, usersCtrl.getInfo)
 
 module.exports = router

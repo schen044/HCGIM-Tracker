@@ -1,4 +1,5 @@
 import sendRequest from './send-request'
+import getAPI from './get-api'
 
 const BASE_URL = '/api/users'
 
@@ -14,6 +15,6 @@ export function checkToken() {
     return sendRequest(`${BASE_URL}/check-token`)
 }
 
-export function getInfo(uname) {
-    return sendRequest(`https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=${uname}`)
+export function getInfo(username) {
+    return getAPI(`${BASE_URL}/info/${username}`)
 }

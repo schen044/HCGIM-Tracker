@@ -2,7 +2,12 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-const ensureLoggedIn = require('./config/ensureLoggedIn')
+const ensureLoggedIn = require('./config/ensureLoggedIn');
+const cors = require('cors');
+const corsOptions = {
+    origin: 'http://localhost',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
 
 require('dotenv').config()
 require('./config/database')
@@ -11,6 +16,7 @@ const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(cors(corsOptions));
 
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')))
 app.use(express.static(path.join(__dirname, 'build')))

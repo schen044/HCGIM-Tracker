@@ -38,6 +38,6 @@ export function checkToken() {
     return usersAPI.checkToken().then(dateStr => new Date(dateStr))
 }
 
-export function getInfo(uname) {
-    return usersAPI.getInfo(uname)
+export function getInfo(username) {
+    return usersAPI.getInfo(username)
 }
