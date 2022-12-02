@@ -28,7 +28,6 @@ async function create(req, res) {
 }
 
 async function edit(req, res) {
-  // console.log(req.params.id)
   const goal = await Goal.findOneAndUpdate({_id:req.params.id}, req.body)
   res.json(goal);
 }

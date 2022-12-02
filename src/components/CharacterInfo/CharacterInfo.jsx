@@ -9,7 +9,6 @@ export default function CharacterInfo({ charInfo }) {
 
     let iconArr = ["https://oldschool.runescape.wiki/images/Gnome_child_icon.png?122dd", "https://oldschool.runescape.wiki/images/Attack_icon.png?b4bce", "https://oldschool.runescape.wiki/images/Defence_icon.png?ca0cd", "https://oldschool.runescape.wiki/images/Strength_icon.png?e6e0c", "https://oldschool.runescape.wiki/images/Hitpoints_icon.png?a4819", "https://oldschool.runescape.wiki/images/Ranged_icon.png?01b0e", "https://oldschool.runescape.wiki/images/Prayer_icon.png?ca0dc", "https://oldschool.runescape.wiki/images/Magic_icon.png?334cf", "https://oldschool.runescape.wiki/images/Cooking_icon.png?a0156", "https://oldschool.runescape.wiki/images/Woodcutting_icon.png?6ead4", "https://oldschool.runescape.wiki/images/Fletching_icon.png?15cda", "https://oldschool.runescape.wiki/images/Fishing_icon.png?15a98", "https://oldschool.runescape.wiki/images/Firemaking_icon.png?45ea0", "https://oldschool.runescape.wiki/images/Crafting_icon.png?a1f71", "https://oldschool.runescape.wiki/images/Smithing_icon.png?d26c5", "https://oldschool.runescape.wiki/images/Mining_icon.png?00870", "https://oldschool.runescape.wiki/images/Herblore_icon.png?ffa9e", "https://oldschool.runescape.wiki/images/Agility_icon.png?389e0", "https://oldschool.runescape.wiki/images/Thieving_icon.png?973fe", "https://oldschool.runescape.wiki/images/Slayer_icon.png?cd34f", "https://oldschool.runescape.wiki/images/Farming_icon.png?558fa", "https://oldschool.runescape.wiki/images/Runecraft_icon.png?c278c", "https://oldschool.runescape.wiki/images/Hunter_icon.png?8762f", "https://oldschool.runescape.wiki/images/Construction_icon.png?f9bf7"]
 
-
     let newStr = charInfo.replaceAll('-1,-1', 'n/a,n/a')
     let charArr = newStr.split("\n")
     charArr.pop();
@@ -30,7 +29,6 @@ export default function CharacterInfo({ charInfo }) {
     })
     let statArr = char2.slice(0, 24)
     let actArr = char2.slice(24)
-    console.log(statArr, actArr)
 
     return (
         <div className="character-info">
