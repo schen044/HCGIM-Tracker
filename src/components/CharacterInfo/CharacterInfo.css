@@ -1,0 +1,18 @@
+.character-info {
+   display: flex; 
+   justify-content: center;
+}
+table {
+    border: 2px black solid;
+    float: left;
+    border-collapse: collapse;
+    margin: 5px;
+    background-color: #503e27;;
+}
+
+th {
+    border-bottom: 2px rgb(77, 51, 17) solid;
+    padding: 5px;
+    color: white;
+    background-color: rgb(192, 150, 94);
+}

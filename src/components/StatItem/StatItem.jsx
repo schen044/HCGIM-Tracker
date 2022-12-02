@@ -1,9 +1,10 @@
-export default function StatItem({ stat }) {
-
+export default function StatItem({stat}) {
     return (
-        <>
-            <h1>statInfoPage</h1>
-            {stat.skill}:{stat.level}
-        </>
+        <tr>
+            <td><img src={stat.icon}/>  {stat.skill}</td>
+            <td>{stat.rank}</td>
+            <td>{stat.level}</td>
+            <td>{stat.experience}</td>
+        </tr>
     )
 }

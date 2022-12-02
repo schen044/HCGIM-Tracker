@@ -10,15 +10,13 @@ export default function NavBar({ user, setUser }) {
 
     return (
         <nav>
-            <Link to="/profile">User Profile</Link>
-            &nbsp; | &nbsp;
-            <Link to="/goals">All Goals</Link>
-            &nbsp;
-            <Link to="/goals/new">New Goal</Link>
-            &nbsp; | &nbsp;
-            Welcome, {user.charName}
-            &nbsp; | &nbsp;
-            <Link to="" onClick={handleLogOut}>Log Out</Link>
+            <img src={require('./gnome.png')} width="50"/>
+            <div className="links">
+                <div>Welcome, <Link to="/profile">{user.charName}</Link></div>
+                |
+                <Link to="/goals">All Goals</Link>
+                |
+                <Link to="" onClick={handleLogOut}>Log Out</Link>
+            </div>
         </nav>
-    )
-}
+)}
