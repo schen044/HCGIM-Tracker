@@ -7,15 +7,14 @@ export default function UserInfoPage({ user }) {
     const [ charInfo, setCharInfo ] = useState("")
     let username = user.charName
 
-    useEffect(() =>
-        async function() {
+    async function handleClick() {
         const characterStats =  await userService.getInfo(username)
-        setCharInfo(characterStats)
-    })
+    setCharInfo(characterStats)}
 
     return (
         <>
             <h1>Stats - {username}</h1>
+            <button type="submit" onClick={handleClick}>Click to see stats</button>
             <CharacterInfo charInfo={charInfo} />
         </>
     )
